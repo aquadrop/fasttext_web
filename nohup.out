@@ -1,0 +1,258 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.4.RELEASE)
+
+2017-07-20 09:21:10.572  INFO 8655 --- [           main] c.e.n.t.TokenizerApplicationController   : Starting TokenizerApplicationController v0.0.1-SNAPSHOT on cco-3501 with PID 8655 (/home/deep/solr/solr-6.5.1/solr_java/tokenizer/target/tokenizer-0.0.1-SNAPSHOT.jar started by root in /home/deep/solr/solr-6.5.1/solr_java/tokenizer)
+2017-07-20 09:21:10.574  INFO 8655 --- [           main] c.e.n.t.TokenizerApplicationController   : No active profile set, falling back to default profiles: default
+2017-07-20 09:21:10.658  INFO 8655 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Thu Jul 20 09:21:10 CST 2017]; root of context hierarchy
+2017-07-20 09:21:12.391  INFO 8655 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 11415 (http)
+2017-07-20 09:21:12.412  INFO 8655 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-20 09:21:12.413  INFO 8655 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-20 09:21:12.530  INFO 8655 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-20 09:21:12.530  INFO 8655 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1878 ms
+2017-07-20 09:21:12.697  INFO 8655 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-20 09:21:12.825  INFO 8655 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-20 09:21:12.833  INFO 8655 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-20 09:21:12.834  INFO 8655 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-20 09:21:12.834  INFO 8655 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+main dict load finished, time elapsed 1131 ms
+model load finished, time elapsed 37 ms.
+2017-07-20 09:21:14.199  INFO 8655 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Searching for resource: edu/stanford/nlp/pipeline/StanfordCoreNLP-chinese.properties ... found.
+2017-07-20 09:21:14.219  INFO 8655 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator tokenize
+2017-07-20 09:21:38.361  INFO 8655 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Loading Chinese dictionaries from 1 file:
+2017-07-20 09:21:38.361  INFO 8655 --- [           main] e.s.nlp.wordseg.ChineseDictionary        :   edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz
+2017-07-20 09:21:38.562  INFO 8655 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Done. Unique words in ChineseDictionary is: 423200.
+2017-07-20 09:21:38.564  INFO 8655 --- [           main] e.s.nlp.ie.AbstractSequenceClassifier    : Loading classifier from edu/stanford/nlp/models/segmenter/chinese/ctb.gz ... done [24.3 sec].
+2017-07-20 09:21:38.569  INFO 8655 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator ssplit
+2017-07-20 09:21:38.574  INFO 8655 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator pos
+2017-07-20 09:21:47.465  INFO 8655 --- [           main] e.s.nlp.tagger.maxent.MaxentTagger       : Loading POS tagger from edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger ... done [8.9 sec].
+2017-07-20 09:21:48.228  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Thu Jul 20 09:21:10 CST 2017]; root of context hierarchy
+2017-07-20 09:21:48.338  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.home()
+2017-07-20 09:21:48.339  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/segment]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.segment(java.lang.String)
+2017-07-20 09:21:48.339  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pos]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.pos(java.lang.String)
+2017-07-20 09:21:48.341  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-20 09:21:48.342  INFO 8655 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-20 09:21:48.367  INFO 8655 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-20 09:21:48.367  INFO 8655 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-20 09:21:48.395  INFO 8655 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-20 09:21:52.471  INFO 8655 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-20 09:21:52.547  INFO 8655 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 11415 (http)
+2017-07-20 09:21:52.555  INFO 8655 --- [           main] c.e.n.t.TokenizerApplicationController   : Started TokenizerApplicationController in 42.287 seconds (JVM running for 42.686)
+2017-07-20 09:31:27.504  INFO 8655 --- [io-11415-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-20 09:31:27.504  INFO 8655 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-20 09:31:27.514  INFO 8655 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2017-07-20 09:31:27.598  INFO 8655 --- [io-11415-exec-1] edu.stanford.nlp.wordseg.CorpusChar      : Loading character dictionary file from edu/stanford/nlp/models/segmenter/chinese/dict/character_list [done].
+2017-07-20 09:31:27.601  INFO 8655 --- [io-11415-exec-1] e.stanford.nlp.wordseg.AffixDictionary   : Loading affix dictionary from edu/stanford/nlp/models/segmenter/chinese/dict/in.ctb [done].
+2017-07-20 12:19:28.159  INFO 8655 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e5e91e4: startup date [Thu Jul 20 09:21:10 CST 2017]; root of context hierarchy
+2017-07-20 12:19:28.563  INFO 8655 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.4.RELEASE)
+
+2017-07-27 09:49:57.544  INFO 15741 --- [           main] c.e.n.t.TokenizerApplicationController   : Starting TokenizerApplicationController v0.0.1-SNAPSHOT on cco-3501 with PID 15741 (/home/deep/solr/solr-6.5.1/solr_java/tokenizer/target/tokenizer-0.0.1-SNAPSHOT.jar started by deep in /home/deep/solr/solr-6.5.1/solr_java/tokenizer)
+2017-07-27 09:49:57.546  INFO 15741 --- [           main] c.e.n.t.TokenizerApplicationController   : No active profile set, falling back to default profiles: default
+2017-07-27 09:49:57.613  INFO 15741 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c97a5: startup date [Thu Jul 27 09:49:57 CST 2017]; root of context hierarchy
+2017-07-27 09:49:58.693  INFO 15741 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 11415 (http)
+2017-07-27 09:49:58.708  INFO 15741 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-27 09:49:58.709  INFO 15741 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-27 09:49:58.824  INFO 15741 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-27 09:49:58.824  INFO 15741 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1213 ms
+2017-07-27 09:49:58.953  INFO 15741 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-27 09:49:58.957  INFO 15741 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-27 09:49:58.957  INFO 15741 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-27 09:49:58.958  INFO 15741 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-27 09:49:58.958  INFO 15741 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+main dict load finished, time elapsed 907 ms
+model load finished, time elapsed 37 ms.
+2017-07-27 09:50:00.052  INFO 15741 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Searching for resource: edu/stanford/nlp/pipeline/StanfordCoreNLP-chinese.properties ... found.
+2017-07-27 09:50:00.076  INFO 15741 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator tokenize
+2017-07-27 09:50:08.430  INFO 15741 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Loading Chinese dictionaries from 1 file:
+2017-07-27 09:50:08.431  INFO 15741 --- [           main] e.s.nlp.wordseg.ChineseDictionary        :   edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz
+2017-07-27 09:50:11.245  INFO 15741 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Done. Unique words in ChineseDictionary is: 423200.
+2017-07-27 09:50:11.248  INFO 15741 --- [           main] e.s.nlp.ie.AbstractSequenceClassifier    : Loading classifier from edu/stanford/nlp/models/segmenter/chinese/ctb.gz ... done [11.1 sec].
+2017-07-27 09:50:11.254  INFO 15741 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator ssplit
+2017-07-27 09:50:11.258  INFO 15741 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator pos
+2017-07-27 09:50:13.062  INFO 15741 --- [           main] e.s.nlp.tagger.maxent.MaxentTagger       : Loading POS tagger from edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger ... done [1.8 sec].
+2017-07-27 09:50:13.457  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c97a5: startup date [Thu Jul 27 09:49:57 CST 2017]; root of context hierarchy
+2017-07-27 09:50:13.564  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/segment]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.segment(java.lang.String)
+2017-07-27 09:50:13.564  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.home()
+2017-07-27 09:50:13.565  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pos]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.pos(java.lang.String)
+2017-07-27 09:50:13.568  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-27 09:50:13.568  INFO 15741 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-27 09:50:13.596  INFO 15741 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 09:50:13.596  INFO 15741 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 09:50:13.635  INFO 15741 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 09:50:13.750  INFO 15741 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-27 09:50:13.832  INFO 15741 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 11415 (http)
+2017-07-27 09:50:13.837  INFO 15741 --- [           main] c.e.n.t.TokenizerApplicationController   : Started TokenizerApplicationController in 16.574 seconds (JVM running for 16.982)
+2017-07-27 09:57:36.482  INFO 15741 --- [io-11415-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-27 09:57:36.483  INFO 15741 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-27 09:57:36.496  INFO 15741 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2017-07-27 09:57:36.573  INFO 15741 --- [io-11415-exec-1] edu.stanford.nlp.wordseg.CorpusChar      : Loading character dictionary file from edu/stanford/nlp/models/segmenter/chinese/dict/character_list [done].
+2017-07-27 09:57:36.574  INFO 15741 --- [io-11415-exec-1] e.stanford.nlp.wordseg.AffixDictionary   : Loading affix dictionary from edu/stanford/nlp/models/segmenter/chinese/dict/in.ctb [done].
+2017-07-28 09:31:02.035  INFO 15741 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28c97a5: startup date [Thu Jul 27 09:49:57 CST 2017]; root of context hierarchy
+2017-07-28 09:31:02.192  INFO 15741 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.4.RELEASE)
+
+2017-08-07 10:03:57.769  INFO 6055 --- [           main] c.e.n.t.TokenizerApplicationController   : Starting TokenizerApplicationController v0.0.1-SNAPSHOT on cco-3501 with PID 6055 (/home/deep/solr/solr_java/tokenizer/target/tokenizer-0.0.1-SNAPSHOT.jar started by deep in /home/deep/solr/solr_java/tokenizer)
+2017-08-07 10:03:57.772  INFO 6055 --- [           main] c.e.n.t.TokenizerApplicationController   : No active profile set, falling back to default profiles: default
+2017-08-07 10:03:57.821  INFO 6055 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a567e1: startup date [Mon Aug 07 10:03:57 CST 2017]; root of context hierarchy
+2017-08-07 10:03:58.660  INFO 6055 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 11415 (http)
+2017-08-07 10:03:58.670  INFO 6055 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-07 10:03:58.670  INFO 6055 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-07 10:03:58.728  INFO 6055 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-07 10:03:58.729  INFO 6055 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 911 ms
+2017-08-07 10:03:58.808  INFO 6055 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-07 10:03:58.812  INFO 6055 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-07 10:03:58.812  INFO 6055 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-07 10:03:58.812  INFO 6055 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-07 10:03:58.812  INFO 6055 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+main dict load finished, time elapsed 743 ms
+model load finished, time elapsed 32 ms.
+2017-08-07 10:03:59.697  INFO 6055 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Searching for resource: edu/stanford/nlp/pipeline/StanfordCoreNLP-chinese.properties ... found.
+2017-08-07 10:03:59.711  INFO 6055 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator tokenize
+2017-08-07 10:04:06.973  INFO 6055 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Loading Chinese dictionaries from 1 file:
+2017-08-07 10:04:06.973  INFO 6055 --- [           main] e.s.nlp.wordseg.ChineseDictionary        :   edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz
+2017-08-07 10:04:07.122  INFO 6055 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Done. Unique words in ChineseDictionary is: 423200.
+2017-08-07 10:04:07.123  INFO 6055 --- [           main] e.s.nlp.ie.AbstractSequenceClassifier    : Loading classifier from edu/stanford/nlp/models/segmenter/chinese/ctb.gz ... done [7.4 sec].
+2017-08-07 10:04:07.127  INFO 6055 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator ssplit
+2017-08-07 10:04:07.130  INFO 6055 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator pos
+2017-08-07 10:04:09.370  INFO 6055 --- [           main] e.s.nlp.tagger.maxent.MaxentTagger       : Loading POS tagger from edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger ... done [2.2 sec].
+2017-08-07 10:04:09.680  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a567e1: startup date [Mon Aug 07 10:03:57 CST 2017]; root of context hierarchy
+2017-08-07 10:04:09.726  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.home()
+2017-08-07 10:04:09.727  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/segment]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.segment(java.lang.String)
+2017-08-07 10:04:09.727  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pos]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.pos(java.lang.String)
+2017-08-07 10:04:09.728  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-07 10:04:09.729  INFO 6055 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-07 10:04:09.746  INFO 6055 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-07 10:04:09.746  INFO 6055 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-07 10:04:09.769  INFO 6055 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-07 10:04:09.845  INFO 6055 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-07 10:04:09.881  INFO 6055 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 11415 (http)
+2017-08-07 10:04:09.883  INFO 6055 --- [           main] c.e.n.t.TokenizerApplicationController   : Started TokenizerApplicationController in 12.352 seconds (JVM running for 12.969)
+2017-08-07 11:09:12.945  INFO 6055 --- [io-11415-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-07 11:09:12.945  INFO 6055 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-07 11:09:12.954  INFO 6055 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2017-08-07 11:09:13.018  INFO 6055 --- [io-11415-exec-1] edu.stanford.nlp.wordseg.CorpusChar      : Loading character dictionary file from edu/stanford/nlp/models/segmenter/chinese/dict/character_list [done].
+2017-08-07 11:09:13.019  INFO 6055 --- [io-11415-exec-1] e.stanford.nlp.wordseg.AffixDictionary   : Loading affix dictionary from edu/stanford/nlp/models/segmenter/chinese/dict/in.ctb [done].
+2017-08-09 18:34:06.129  INFO 6055 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a567e1: startup date [Mon Aug 07 10:03:57 CST 2017]; root of context hierarchy
+2017-08-09 18:34:06.257  INFO 6055 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.4.RELEASE)
+
+2017-08-09 19:24:26.969  INFO 5418 --- [           main] c.e.n.t.TokenizerApplicationController   : Starting TokenizerApplicationController v0.0.1-SNAPSHOT on cco-3501 with PID 5418 (/home/deep/solr/solr_java/tokenizer/target/tokenizer-0.0.1-SNAPSHOT.jar started by root in /home/deep/solr/solr_java/tokenizer)
+2017-08-09 19:24:26.972  INFO 5418 --- [           main] c.e.n.t.TokenizerApplicationController   : No active profile set, falling back to default profiles: default
+2017-08-09 19:24:27.070  INFO 5418 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Aug 09 19:24:27 CST 2017]; root of context hierarchy
+2017-08-09 19:24:28.756  INFO 5418 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 11415 (http)
+2017-08-09 19:24:28.777  INFO 5418 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-09 19:24:28.777  INFO 5418 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-09 19:24:28.856  INFO 5418 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-09 19:24:28.856  INFO 5418 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1794 ms
+2017-08-09 19:24:28.992  INFO 5418 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-09 19:24:29.001  INFO 5418 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-09 19:24:29.002  INFO 5418 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-09 19:24:29.002  INFO 5418 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-09 19:24:29.002  INFO 5418 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+main dict load finished, time elapsed 965 ms
+model load finished, time elapsed 34 ms.
+2017-08-09 19:24:30.135  INFO 5418 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Searching for resource: edu/stanford/nlp/pipeline/StanfordCoreNLP-chinese.properties ... found.
+2017-08-09 19:24:30.150  INFO 5418 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator tokenize
+2017-08-09 19:24:42.481  INFO 5418 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Loading Chinese dictionaries from 1 file:
+2017-08-09 19:24:42.482  INFO 5418 --- [           main] e.s.nlp.wordseg.ChineseDictionary        :   edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz
+2017-08-09 19:24:42.632  INFO 5418 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Done. Unique words in ChineseDictionary is: 423200.
+2017-08-09 19:24:42.633  INFO 5418 --- [           main] e.s.nlp.ie.AbstractSequenceClassifier    : Loading classifier from edu/stanford/nlp/models/segmenter/chinese/ctb.gz ... done [12.4 sec].
+2017-08-09 19:24:42.637  INFO 5418 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator ssplit
+2017-08-09 19:24:42.641  INFO 5418 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator pos
+2017-08-09 19:24:43.493  INFO 5418 --- [           main] e.s.nlp.tagger.maxent.MaxentTagger       : Loading POS tagger from edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger ... done [0.8 sec].
+2017-08-09 19:24:43.785  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Aug 09 19:24:27 CST 2017]; root of context hierarchy
+2017-08-09 19:24:43.872  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.home()
+2017-08-09 19:24:43.873  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/segment]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.segment(java.lang.String)
+2017-08-09 19:24:43.873  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pos]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.pos(java.lang.String)
+2017-08-09 19:24:43.875  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-09 19:24:43.876  INFO 5418 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-09 19:24:43.902  INFO 5418 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 19:24:43.902  INFO 5418 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 19:24:46.576  INFO 5418 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-09 19:24:46.693  INFO 5418 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-09 19:24:46.762  INFO 5418 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 11415 (http)
+2017-08-09 19:24:46.767  INFO 5418 --- [           main] c.e.n.t.TokenizerApplicationController   : Started TokenizerApplicationController in 20.209 seconds (JVM running for 20.751)
+2017-08-09 19:27:13.827  INFO 5418 --- [io-11415-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-09 19:27:13.827  INFO 5418 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-09 19:27:13.851  INFO 5418 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-08-09 19:27:13.939  INFO 5418 --- [io-11415-exec-1] edu.stanford.nlp.wordseg.CorpusChar      : Loading character dictionary file from edu/stanford/nlp/models/segmenter/chinese/dict/character_list [done].
+2017-08-09 19:27:13.941  INFO 5418 --- [io-11415-exec-1] e.stanford.nlp.wordseg.AffixDictionary   : Loading affix dictionary from edu/stanford/nlp/models/segmenter/chinese/dict/in.ctb [done].
+2017-08-11 11:18:16.962  INFO 5418 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Aug 09 19:24:27 CST 2017]; root of context hierarchy
+2017-08-11 11:18:17.091  INFO 5418 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.4.RELEASE)
+
+2017-08-11 12:00:18.152  INFO 3481 --- [           main] c.e.n.t.TokenizerApplicationController   : Starting TokenizerApplicationController v0.0.1-SNAPSHOT on cco-3501 with PID 3481 (/home/deep/solr/solr_java/tokenizer/target/tokenizer-0.0.1-SNAPSHOT.jar started by deep in /home/deep/solr/solr_java/tokenizer)
+2017-08-11 12:00:18.154  INFO 3481 --- [           main] c.e.n.t.TokenizerApplicationController   : No active profile set, falling back to default profiles: default
+2017-08-11 12:00:18.206  INFO 3481 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Fri Aug 11 12:00:18 CST 2017]; root of context hierarchy
+2017-08-11 12:00:19.099  INFO 3481 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 11415 (http)
+2017-08-11 12:00:19.109  INFO 3481 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-11 12:00:19.110  INFO 3481 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-11 12:00:19.166  INFO 3481 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-11 12:00:19.166  INFO 3481 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 962 ms
+2017-08-11 12:00:19.249  INFO 3481 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-11 12:00:19.252  INFO 3481 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-11 12:00:19.252  INFO 3481 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-11 12:00:19.252  INFO 3481 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-11 12:00:19.252  INFO 3481 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+main dict load finished, time elapsed 722 ms
+model load finished, time elapsed 31 ms.
+2017-08-11 12:00:20.111  INFO 3481 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Searching for resource: edu/stanford/nlp/pipeline/StanfordCoreNLP-chinese.properties ... found.
+2017-08-11 12:00:20.125  INFO 3481 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator tokenize
+2017-08-11 12:00:27.353  INFO 3481 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Loading Chinese dictionaries from 1 file:
+2017-08-11 12:00:27.354  INFO 3481 --- [           main] e.s.nlp.wordseg.ChineseDictionary        :   edu/stanford/nlp/models/segmenter/chinese/dict-chris6.ser.gz
+2017-08-11 12:00:27.500  INFO 3481 --- [           main] e.s.nlp.wordseg.ChineseDictionary        : Done. Unique words in ChineseDictionary is: 423200.
+2017-08-11 12:00:27.501  INFO 3481 --- [           main] e.s.nlp.ie.AbstractSequenceClassifier    : Loading classifier from edu/stanford/nlp/models/segmenter/chinese/ctb.gz ... done [7.3 sec].
+2017-08-11 12:00:27.505  INFO 3481 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator ssplit
+2017-08-11 12:00:27.509  INFO 3481 --- [           main] e.stanford.nlp.pipeline.StanfordCoreNLP  : Adding annotator pos
+2017-08-11 12:00:29.527  INFO 3481 --- [           main] e.s.nlp.tagger.maxent.MaxentTagger       : Loading POS tagger from edu/stanford/nlp/models/pos-tagger/chinese-distsim/chinese-distsim.tagger ... done [2.0 sec].
+2017-08-11 12:00:29.684  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Fri Aug 11 12:00:18 CST 2017]; root of context hierarchy
+2017-08-11 12:00:29.731  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/segment]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.segment(java.lang.String)
+2017-08-11 12:00:29.732  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.home()
+2017-08-11 12:00:29.732  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pos]}" onto java.lang.String com.ecovacs.nlp.tokenizer.TokenizerApplicationController.pos(java.lang.String)
+2017-08-11 12:00:29.734  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-11 12:00:29.734  INFO 3481 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-11 12:00:29.751  INFO 3481 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-11 12:00:29.751  INFO 3481 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-11 12:00:29.775  INFO 3481 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-11 12:00:29.997  INFO 3481 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-11 12:00:30.032  INFO 3481 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 11415 (http)
+2017-08-11 12:00:30.034  INFO 3481 --- [           main] c.e.n.t.TokenizerApplicationController   : Started TokenizerApplicationController in 12.125 seconds (JVM running for 12.604)
+2017-08-11 12:01:16.378  INFO 3481 --- [io-11415-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-11 12:01:16.378  INFO 3481 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-11 12:01:16.388  INFO 3481 --- [io-11415-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2017-08-11 12:01:16.448  INFO 3481 --- [io-11415-exec-1] edu.stanford.nlp.wordseg.CorpusChar      : Loading character dictionary file from edu/stanford/nlp/models/segmenter/chinese/dict/character_list [done].
+2017-08-11 12:01:16.450  INFO 3481 --- [io-11415-exec-1] e.stanford.nlp.wordseg.AffixDictionary   : Loading affix dictionary from edu/stanford/nlp/models/segmenter/chinese/dict/in.ctb [done].
