@@ -36,9 +36,25 @@ public class TokenizerApplicationController {
 	
 	@RequestMapping("/fasttext/s2v")
     @ResponseBody
-    String s2v(@RequestParam(value="q") String text) throws JsonProcessingException {
+    String s2v(@RequestParam(value="q") String text, @RequestParam(value="w") String weight) throws JsonProcessingException {
 		String[] sentence = text.split(",");
-        List<Float> vector = core.sent2vec(sentence);
+		float[] weights = null;
+		if (weight != null) {
+			String[] weightStringList = weight.split(",");
+			// order is assumed to be right
+			if (weightStringList.length > 0 && weightStringList.length == sentence.length) {
+				weights = new float[sentence.length];
+				for (int i = 0; i < weights.length; i++) {
+					weights[i] = Float.valueOf(weightStringList[i]);
+				}
+			}
+		}
+		List<Float> vector = null;
+		if (weights == null) {
+			vector = core.sent2vec(sentence);
+		} else {
+			vector = core.sent2vec(sentence, weights);
+		}
         Map<String, List<Float>> result = new HashMap<String, List<Float>>();
         result.put("vector", vector);
         return JsonUtils.toJson(result);

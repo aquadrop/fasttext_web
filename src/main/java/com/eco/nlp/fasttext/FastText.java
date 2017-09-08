@@ -34,13 +34,22 @@ public class FastText {
 	}
 	
 	public List<Float> sent2vec(String[] sentence) {
-		return this.avgw2v(sentence);
+		float[] weights = new float[sentence.length];
+		for (int w = 0; w < weights.length; w++) {
+			weights[w] = 1.0f;
+		}
+		return this.avgw2v(sentence, weights);
 	}
 	
-	public List<Float> avgw2v(String[] sentence) {
+	public List<Float> sent2vec(String[] sentence, float[] weights) {
+		return this.avgw2v(sentence, weights);
+	}
+	
+	public List<Float> avgw2v(String[] sentence, float[] weights) {
 		try {
 			Float[] avg = null;
-			for (String word : sentence) {
+			for (int w = 0; w < sentence.length; w++) {
+				String word = sentence[w];
 				List<Float> vector = this.w2v(word);
 				if (avg == null) {
 					avg = new Float[vector.size()];
@@ -50,12 +59,17 @@ public class FastText {
 				}
 				
 				for (int i = 0; i < avg.length; i++) {
-					avg[i] += vector.get(i);
+					avg[i] += vector.get(i) * weights[w];
 				}
 			}
 			
+			float sum = 0;
+			for (int w = 0; w < weights.length; w++) {
+				sum += weights[w];
+			}
+			
 			for (int i = 0; i < avg.length; i++) {
-				avg[i] = avg[i] / sentence.length;
+				avg[i] = avg[i] / sum;
 			}
 			
 			return Arrays.asList(avg);
