@@ -7,13 +7,13 @@ import java.util.stream.Collectors;
 
 import com.github.jfasttext.JFastText;
 
-public class FastText {
+public class FastTextWrapper {
 	
 	private JFastText jft;
 	
-	private static FastText instance;
+	private static FastTextWrapper instance;
 	
-	private FastText() {
+	private FastTextWrapper() {
 		jft = new JFastText();
 		// Load model from file
 		System.out.println("loading model...");
@@ -21,9 +21,9 @@ public class FastText {
 		System.out.println("model loaded...");
 	}
 	
-	public static FastText getInstance() {
+	public static FastTextWrapper getInstance() {
 		if (instance == null) {
-			instance = new FastText();
+			instance = new FastTextWrapper();
 		}
 		
 		return instance;
@@ -80,7 +80,7 @@ public class FastText {
 	
 	public static void main(String[] args) {
 		
-		FastText ft = FastText.getInstance();
+		FastTextWrapper ft = FastTextWrapper.getInstance();
 
 		// Do label prediction
 		String text = "hello";

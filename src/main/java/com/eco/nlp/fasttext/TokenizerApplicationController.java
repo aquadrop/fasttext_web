@@ -8,16 +8,18 @@ import java.util.Vector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
+ import com.eco.nlp.fasttext.FastTextWrapper;
 
 @SpringBootApplication
 @EnableAutoConfiguration
 @RestController
 public class TokenizerApplicationController {
-	FastText core = FastText.getInstance();
+	FastTextWrapper core = FastTextWrapper.getInstance();
 	@RequestMapping("/")
     @ResponseBody
     String home() {
@@ -38,7 +40,7 @@ public class TokenizerApplicationController {
     String s2v(@RequestParam(value="q") String text, @RequestParam(value="w") String weight) throws JsonProcessingException {
 		String[] sentence = text.split(",");
 		float[] weights = null;
-		if (weight != null) {
+		if (weight != null && !StringUtils.isEmpty(weight)) {
 			String[] weightStringList = weight.split(",");
 			// order is assumed to be right
 			if (weightStringList.length > 0 && weightStringList.length == sentence.length) {
@@ -63,7 +65,7 @@ public class TokenizerApplicationController {
     @ResponseBody
     String maxsim(@RequestParam(value="q1") String text1, @RequestParam(value="q2") String text2) throws JsonProcessingException {
 		String[] sentence1 = text1.split(",");
-		System.out.println(text2);
+//		System.out.println(text2);
 		String[] sentence2 = text2.split("@@");   //q1和多个句子计算相似度
 		List<Float> vector1 = null;
 		List<Float> vector2 = null;
