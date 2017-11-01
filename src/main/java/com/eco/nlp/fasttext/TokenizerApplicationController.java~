@@ -64,7 +64,7 @@ public class TokenizerApplicationController {
     String maxsim(@RequestParam(value="q1") String text1, @RequestParam(value="q2") String text2) throws JsonProcessingException {
 		String[] sentence1 = text1.split(",");
 		System.out.println(text2);
-		String[] sentence2 = text2.split("@@");   //q1和多个句子计算相似度
+		String[] sentence2 = text2.split("@");   //q1和多个句子计算相似度
 		List<Float> vector1 = null;
 		List<Float> vector2 = null;
 		double cossim = 0;
