@@ -70,16 +70,16 @@ public class TokenizerApplicationController {
 		double cossim = 0;
 		double maxcossim = cossim;
 		vector1= core.sent2vec(sentence1);
-		Vector<String[]> strv= new Vector(sentence2.length); 
-		Vector<Double> cosv= new Vector(sentence2.length); 
+		Vector<String[]> strv= new Vector<String[]>(sentence2.length); 
+		Vector<Double> cosv= new Vector<Double>(sentence2.length); 
 		String simstring = null;
 		for(int i=0 ; i < sentence2.length ;i++) {
 			String[] sen = sentence2[i].split(",");
 			strv.add(sen);
 			vector2= core.sent2vec(sen);
 			cossim = listcos(vector1,vector2);   //计算相似度
+//			System.out.println(text1 + sentence2[i] + cossim);
 			cosv.add(cossim);
-			System.out.println(sentence2[i]+":"+cossim);
 			if(cossim > maxcossim) {
 				maxcossim = cossim;
 				simstring = sentence2[i];
